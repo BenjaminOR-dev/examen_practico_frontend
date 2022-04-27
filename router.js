@@ -9,7 +9,8 @@ const page = (path) => () => import(`~/pages/${path}`).then((m) => m.default || 
 const routes = [
   { path: "/inicio", name: "inicio", component: page("index.vue") },
   { path: "/login", name: "login", component: page("auth/login.vue") },
-  { path: "/examenes", name: "examenes", component: page("examenes/show.vue") },
+  { path: "/examenes", name: "examenes", component: page("examenes/available.vue") },
+  { path: "/examen/:idExamen", name: "ver_examen", component: page("examenes/show.vue") },
   { path: "/examenes-admin", name: "examenes.admin", component: page("examenes/admin.vue") },
 ];
 
