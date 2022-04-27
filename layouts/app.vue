@@ -17,6 +17,12 @@
       <v-divider></v-divider>
 
       <v-list nav dense>
+        <v-list-item link :to="{ name: 'inicio' }">
+          <v-list-item-icon>
+            <v-icon>mdi-home</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Inicio</v-list-item-title>
+        </v-list-item>
         <v-list-item link :to="{ name: 'examenes' }">
           <v-list-item-icon>
             <v-icon>mdi-file-document-multiple</v-icon>
