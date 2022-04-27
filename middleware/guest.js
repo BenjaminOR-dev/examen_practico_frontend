@@ -1,14 +1,6 @@
-export default async ({ $auth, redirect, next }) => {
-  let user = await $auth.user;
-
-  if (user) {
-    return redirect({ name: "inicio" });
+export default async function ({ $auth, redirect, next }) {
+  if (!$auth.loggedIn) {
+    return next();
   }
-
-  if (user.activo == 0) {
-    await this.$auth.logout();
-    return redirect({ name: "login" });
-  }
-
-  return next();
-};
+  return redirect({ name: "inicio" });
+}

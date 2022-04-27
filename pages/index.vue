@@ -1,10 +1,12 @@
 <template>
+  <v-container>
 
+  </v-container>
 </template>
 
 <script>
 export default {
-  layout: "simple",
+  layout: "app",
   middleware: ["auth"],
 
   head() {
