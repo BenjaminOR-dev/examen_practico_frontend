@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-navigation-drawer app permanent expand-on-hover>
+    <v-navigation-drawer app permanent>
       <v-list>
         <v-list-item link>
           <v-list-item-content>
@@ -17,17 +17,17 @@
       <v-divider></v-divider>
 
       <v-list nav dense>
-        <v-list-item link>
+        <v-list-item link :to="{ name: 'examenes' }">
           <v-list-item-icon>
-            <v-icon>mdi-folder</v-icon>
+            <v-icon>mdi-file-document-multiple</v-icon>
           </v-list-item-icon>
-          <v-list-item-title>My Files</v-list-item-title>
+          <v-list-item-title>Ver examenes</v-list-item-title>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link :to="{ name: 'examenes.admin' }">
           <v-list-item-icon>
-            <v-icon>mdi-account-multiple</v-icon>
+            <v-icon>mdi-file-edit</v-icon>
           </v-list-item-icon>
-          <v-list-item-title>Shared with me</v-list-item-title>
+          <v-list-item-title>Crear examen</v-list-item-title>
         </v-list-item>
         <v-list-item link @click="logout()">
           <v-list-item-icon>
